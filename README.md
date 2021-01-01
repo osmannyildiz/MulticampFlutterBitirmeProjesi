@@ -1,4 +1,4 @@
-# ![](https://raw.githubusercontent.com/osmannyildiz/multicamp-kotlin-bitirme-projesi/master/img/google_code_24.png) Multicamp Flutter Bitirme Projesi
+# ![](https://raw.githubusercontent.com/osmannyildiz/multicamp-flutter-bitirme-projesi/main/img/google_code_24.png) Multicamp Flutter Bitirme Projesi
 MultiGroup tarafından Kasım-Aralık 2020'de düzenlenen Flutter ile mobil uygulama geliştirme eğitimi için bitirme projesi.
 
 [Eğitimin canlı yayın kayıtları (YouTube)](https://www.youtube.com/playlist?list=PLZj2Q42tw-68zEBhpO_2mwX-1roiSvEHd)
@@ -20,7 +20,7 @@ MultiGroup tarafından Kasım-Aralık 2020'de düzenlenen Flutter ile mobil uygu
 
 
 ## Ekran Görüntüleri
-<img src="https://raw.githubusercontent.com/osmannyildiz/multicamp-kotlin-bitirme-projesi/master/img/screenshots/screenshot1.jpg" alt="Ekran görüntüsü" height="480"> <img src="https://raw.githubusercontent.com/osmannyildiz/multicamp-kotlin-bitirme-projesi/master/img/screenshots/screenshot2.jpg" alt="Ekran görüntüsü" height="480">
+<img src="https://raw.githubusercontent.com/osmannyildiz/multicamp-flutter-bitirme-projesi/main/img/screenshots/screenshot1.jpg" alt="Ekran görüntüsü" height="480"> <img src="https://raw.githubusercontent.com/osmannyildiz/multicamp-flutter-bitirme-projesi/main/img/screenshots/screenshot2.jpg" alt="Ekran görüntüsü" height="480"> <img src="https://raw.githubusercontent.com/osmannyildiz/multicamp-flutter-bitirme-projesi/main/img/screenshots/screenshot3.jpg" alt="Ekran görüntüsü" height="480"> <img src="https://raw.githubusercontent.com/osmannyildiz/multicamp-flutter-bitirme-projesi/main/img/screenshots/screenshot5.jpg" alt="Ekran görüntüsü" height="480"> <img src="https://raw.githubusercontent.com/osmannyildiz/multicamp-flutter-bitirme-projesi/main/img/screenshots/screenshot6.jpg" alt="Ekran görüntüsü" height="480">
 
 
 ## Yeni eğitimleri kaçırmamak için Developer Multicamp'i takip edin
