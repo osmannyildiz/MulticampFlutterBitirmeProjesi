@@ -1,0 +1,96 @@
+import 'package:flutter/material.dart';
+import 'package:flutter_mobx/flutter_mobx.dart';
+import 'package:multicamp_flutter_app_prototype/ui/home/view_model/home_view_model.dart';
+import 'package:webfeed/webfeed.dart';
+
+class HomeView extends StatefulWidget {
+  @override
+  _HomeViewState createState() => _HomeViewState();
+}
+
+class _HomeViewState extends State<HomeView> {
+  HomeViewModel viewModel;
+
+  @override
+  Widget build(BuildContext context) {
+    viewModel = HomeViewModel();
+    viewModel.init();
+    return Scaffold(
+        body: CustomScrollView(slivers: [
+      buildSliverAppBar(),
+      SliverPadding(
+          padding: EdgeInsets.symmetric(horizontal: 12),
+          sliver: Observer(builder: (_) {
+            return viewModel.loading
+                ? Center(child: CircularProgressIndicator())
+                : Container(
+                    padding: EdgeInsets.symmetric(horizontal: 12),
+                    child: buildSliverList(viewModel));
+          }))
+    ]));
+  }
+
+  SliverAppBar buildSliverAppBar() {
+    return SliverAppBar(
+        floating: false,
+        pinned: true,
+        snap: false,
+        backgroundColor: Colors.white,
+        title: TextField(
+            controller: viewModel.searchController,
+            decoration: InputDecoration(
+                hintText: "Başlıklarda ara...", border: InputBorder.none),
+            onSubmitted: (String query) => viewModel.applyFilter()),
+        actions: [
+          IconButton(
+              icon: Icon(Icons.backspace, color: Colors.black54),
+              onPressed: () => viewModel.clearFilter())
+        ]);
+  }
+
+  SliverList buildSliverList(HomeViewModel viewModel) {
+    return SliverList(
+        delegate: SliverChildBuilderDelegate((BuildContext context, int index) {
+      if (viewModel.items.length > index) {
+        return buildNewsCard(viewModel, index);
+      } else {
+        return Container();
+      }
+    }, childCount: viewModel.items.length));
+  }
+
+  Card buildNewsCard(HomeViewModel viewModel, int index) {
+    final RssItem newsItem = viewModel.items[index];
+    final cornerRadius = Radius.circular(4);
+
+    var cardMargin;
+    if (index == 0) {
+      cardMargin = EdgeInsets.only(top: 12, bottom: 4);
+    } else if (index == viewModel.items.length - 1) {
+      cardMargin = EdgeInsets.only(top: 4, bottom: 12);
+    } else {
+      cardMargin = EdgeInsets.symmetric(vertical: 4);
+    }
+
+    return Card(
+      margin: cardMargin,
+      shape:
+          RoundedRectangleBorder(borderRadius: BorderRadius.all(cornerRadius)),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          ClipRRect(
+              borderRadius: BorderRadius.only(
+                  topLeft: cornerRadius, topRight: cornerRadius),
+              child: Image.network(newsItem.imageUrl)),
+          Container(
+              margin: EdgeInsets.all(12),
+              child: Text(
+                newsItem.title,
+                style: TextStyle(fontWeight: FontWeight.w600, fontSize: 16),
+              ))
+        ],
+      ),
+    );
+  }
+}

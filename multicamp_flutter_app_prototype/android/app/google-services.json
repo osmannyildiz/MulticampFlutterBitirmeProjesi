@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "13433205511",
+    "project_id": "multicamp-flutter-app-prototyp",
+    "storage_bucket": "multicamp-flutter-app-prototyp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:13433205511:android:42eb044501b6ea53170ba2",
+        "android_client_info": {
+          "package_name": "com.example.multicamp_flutter_app_prototype"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "13433205511-uakor3mekphpnf659h29b1c9ivebo74g.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.multicamp_flutter_app_prototype",
+            "certificate_hash": "712bf9e889d09cb8bda727dd31fc78435e539560"
+          }
+        },
+        {
+          "client_id": "13433205511-7h235rmvdh0tsaut1rf5d8ucai8e3le2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBMsLZqwfwXvleWOH19JZNjZG0XKUr84SU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "13433205511-7h235rmvdh0tsaut1rf5d8ucai8e3le2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
